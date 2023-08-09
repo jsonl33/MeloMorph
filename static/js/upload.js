@@ -43,3 +43,17 @@ document.getElementById('upload-form').addEventListener('submit', function(e) {
       }
     });
   });
+
+var textarea = document.getElementById('prompt');
+
+// 텍스트가 변경될 때마다 높이를 조절하는 함수
+function adjustHeight() {
+  textarea.style.height = '18px'; // 높이를 재조정하기 위해 먼저 auto로 설정
+  textarea.style.height = (textarea.scrollHeight) + 'px'; // 스크롤 높이만큼 높이 설정
+}
+
+// input 이벤트 리스너를 추가하여 텍스트가 변경될 때마다 높이 조절
+textarea.addEventListener('input', adjustHeight);
+
+// 페이지 로드 시 한 번 높이 조절
+adjustHeight();
