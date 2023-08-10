@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: #1a1a1a;
-    border-radius: 10px; /* 추가된 부분 */
+    border-radius: 15px;
 }
 
 h1 {
@@ -61,3 +61,42 @@ button {
 button:hover {
     background-color: #e6e6ff;
 }
+
+.sidebar {
+    height: calc(100% - 33px); /* 높이를 조금 줄입니다. */
+    width: 240px; /* 너비를 줄여 오른쪽에 여백을 만듭니다. */
+    position: fixed;
+    top: 8px;
+    right: 5px; /* 오른쪽 여백을 추가합니다. */
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+    border-radius: 15px; /* 네 방향 모두 둥글게 만듭니다. */
+  }
+
+.sidebar .logo {
+    font-size: 24px;
+    padding: 15px;
+    color: #a3a3f5; /* 로고 색상 */
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.content {
+    margin-right: 245px; /* 오른쪽 여백을 조정하여 사이드바와 맞춥니다. */
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+  }

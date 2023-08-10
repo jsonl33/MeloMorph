@@ -32,5 +32,11 @@ def create_video(request):
         form = VideoProjectForm()
     return render(request, 'create_video.html', {'form': form})
 
+from django.shortcuts import render
+
+def create_music(request):
+    return render(request, 'create_music.html')
+
+
 
 

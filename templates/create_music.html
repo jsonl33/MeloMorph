@@ -2,30 +2,30 @@
 <html lang="en">
   <head>
     {% extends 'base.html' %} 
-    {% block title %}Video - MeloMorph{% endblock %}
+    {% block title %}Music - MeloMorph{% endblock %}
     {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MeloMorph - Music to Video Generator</title>
+    <title>MeloMorph - Text to Music Generator</title>
   </head>
   <body>
     {% block content %}
-    <!-- 비디오 생성 페이지 내용 -->
+    <!-- 음악 생성 페이지 내용 -->
     <div class="container">
-      <h1>Music to Video</h1>
+      <h1>Text to Music</h1>
       <form id="upload-form" method="post" enctype="multipart/form-data">
         <div id="drop-zone">
-          <p>Drag and drop your music file here or
+          <p>Drag and drop your melody file here or
             <a href="#" id="file-select">click to select</a>
           </p>
-          <input type="file" id="file-input" name="music_file" style="display: none"/>
+          <input type="file" id="file-input" name="melody_file" style="display: none"/>
         </div>
         <textarea id="prompt" name="prompt" placeholder="Enter your prompt here..."></textarea>
         <button type="submit">Generate</button>
         {% csrf_token %}
       </form>
       <p id="result"></p>
-      <video id="video-player" controls style="display:none;"></video>
+      <audio id="music-player" controls style="display:none;"></audio>
       <a id="download-link" href="#" style="display:none;">Download</a>
     </div>
     {% endblock %}

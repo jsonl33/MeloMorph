@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io
 
 command.txt
+activate.bat
 
 ### OSX ###
 .DS_Store

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>{% block title %}MeloMorph{% endblock %}</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">MeloMorph</div>
+        <a href="{% url 'video' %}">Music2Video</a>
+        <a href="{% url 'music' %}">Text2Music</a>
+        <!-- 다른 메뉴 아이템 추가 -->
+    </div>
+    <div class="content">
+        {% block content %}
+        <!-- 페이지 내용 -->
+        {% endblock %}
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
